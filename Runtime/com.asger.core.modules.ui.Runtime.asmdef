@@ -1,0 +1,18 @@
+{
+    "name": "com.asger.core.modules.ui",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a7a4c34601384f9389d5c4207f3c6331",
+        "GUID:0894cfc12853192419b32e8cb5b453aa",
+        "GUID:8b7cc3e86d77403b8b984c08cbaeaf8f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
