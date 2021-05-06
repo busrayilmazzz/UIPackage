@@ -9,6 +9,7 @@ namespace com.asger.core.modules.ui
 {
     public class TextManagerInputField : MonoBehaviour
     {
+
         [SerializeField]
         private Text text;
 
