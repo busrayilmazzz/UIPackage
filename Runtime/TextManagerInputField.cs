@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Microsoft.MixedReality.Toolkit.Experimental.UI;
-
+using System;
 
 namespace com.asger.core.modules.ui
 {
@@ -13,28 +13,61 @@ namespace com.asger.core.modules.ui
         [SerializeField]
         private Text text;
 
-        private string MrtkGuiInputField_Text_1="";
+        private string mrtkGuiInputField_Text;
+
+        private MRTKUGUIInputField mrtkUGUIInputField;
+
 
         // Start is called before the first frame update
         void Start()
         {
-          
-            gameObject.GetComponent<MRTKUGUIInputField>().onEndEdit.AddListener(delegate { SetInputField(text.GetComponent<Text>().text); });
+            mrtkGuiInputField_Text = "";
+
+            try
+            {
+                mrtkUGUIInputField = gameObject.GetComponent<MRTKUGUIInputField>();
+
+                try
+                {
+
+                    mrtkUGUIInputField.onEndEdit.AddListener(delegate { SetInputField(text.GetComponent<Text>().text); });
+
+                }
+                catch (Exception e)
+                {
+
+                    Debug.Log("TextManagerInputField Start() | mrtkUGUIInputField onEndEdit AddListener : " + e.Message);
+
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                Debug.Log("TextManagerInputField Start() | mrtkUGUIInputField not found : " + e.Message);
+
+            }
+
+
         }
 
 
-        private void SetInputField(string MrtkGuiInputField_Text_1)
+        private void SetInputField(string mrtkGuiInputField_Text)
         {
+            Debug.Log("TextManagerInputField SetInputField() | Begin |  mrtkUGUIInputField setting... ");
 
-        
-            this.MrtkGuiInputField_Text_1 = MrtkGuiInputField_Text_1;
+            this.mrtkGuiInputField_Text = mrtkGuiInputField_Text;
 
+            Debug.Log("TextManagerInputField SetInputField() | End ");
         }
 
 
         public string GetInputField()
         {
-            return MrtkGuiInputField_Text_1;
+            Debug.Log("TextManagerInputField GetInputField() | mrtkUGUIInputField text : " + mrtkGuiInputField_Text);
+
+            return mrtkGuiInputField_Text;
         }
 
     }
