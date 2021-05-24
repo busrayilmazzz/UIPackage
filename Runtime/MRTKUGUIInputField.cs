@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 namespace Microsoft.MixedReality.Toolkit.Experimental.UI
 {
-
     /// <summary>
     /// A derived class of UGUI's InputField to workaround with some issues of typing on HoloLens 2
     /// </summary>
