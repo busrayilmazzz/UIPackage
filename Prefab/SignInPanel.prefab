@@ -87,7 +87,7 @@ MonoBehaviour:
   moveLerpTime: 0.1
   rotateLerpTime: 0.1
   scaleLerpTime: 0
-  maintainScaleOnInitialization: 1
+  maintainScale: 1
   smoothing: 1
   lifetime: 0
   referenceDirection: 1
@@ -118,9 +118,6 @@ MonoBehaviour:
   autoFollowAtDistance: 0
   autoFollowDistance: 2
   autoFollowTransformTarget: {fileID: 87984349336945355}
-  autoFollowTriggered:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2727704838437731105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,7 +1767,7 @@ MonoBehaviour:
   mainLabelText: {fileID: 0}
   interactable: {fileID: 2221963351926334791}
   seeItSayItLabel: {fileID: 0}
-  seeItSayItLabelText: {fileID: 0}
+  seeItSatItLabelText: {fileID: 0}
   iconStyle: 0
   iconCharLabel: {fileID: 0}
   iconCharFont: {fileID: 0}
@@ -3379,7 +3376,7 @@ MonoBehaviour:
   mainLabelText: {fileID: 1244736632258933572}
   interactable: {fileID: 1274200260419463098}
   seeItSayItLabel: {fileID: 0}
-  seeItSayItLabelText: {fileID: 0}
+  seeItSatItLabelText: {fileID: 0}
   iconStyle: 0
   iconCharLabel: {fileID: 155129458354399403}
   iconCharFont: {fileID: 0}
@@ -4473,7 +4470,7 @@ MonoBehaviour:
   mainLabelText: {fileID: 6282866399367037315}
   interactable: {fileID: 4244132714845786031}
   seeItSayItLabel: {fileID: 0}
-  seeItSayItLabelText: {fileID: 0}
+  seeItSatItLabelText: {fileID: 0}
   iconStyle: 0
   iconCharLabel: {fileID: 1431727706620069205}
   iconCharFont: {fileID: 0}
@@ -4853,8 +4850,8 @@ GameObject:
   - component: {fileID: 8039454958103420687}
   - component: {fileID: 8039454958103420683}
   - component: {fileID: 8039454958103420682}
-  - component: {fileID: 6451522584762157511}
-  - component: {fileID: 1501741822333407831}
+  - component: {fileID: 5327842232837537274}
+  - component: {fileID: 1069669426804813281}
   m_Layer: 5
   m_Name: MRKeyboardInputField (TMP)
   m_TagString: Untagged
@@ -4920,7 +4917,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6451522584762157511
+--- !u!114 &5327842232837537274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4929,7 +4926,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8039454958103420686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047c3b7041b62b64183482c0f89d6e4b, type: 3}
+  m_Script: {fileID: 11500000, guid: a53105d3ba8017f4e9eefdee71ca5815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3047522906734907107}
+--- !u!114 &1069669426804813281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8039454958103420686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db60ee8118365c4da7b18ef208a9d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -4985,19 +4995,6 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_ShouldActivateOnSelect: 1
-  disableUGUIWorkaround: 0
---- !u!114 &1501741822333407831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8039454958103420686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53320307dee93f640aec3b133d13b341, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   disableUGUIWorkaround: 0
 --- !u!1 &8039454958108819804
 GameObject:
@@ -5062,8 +5059,8 @@ GameObject:
   - component: {fileID: 8039454958294184815}
   - component: {fileID: 8039454958294184811}
   - component: {fileID: 8039454958294184810}
-  - component: {fileID: 3405516508341212124}
-  - component: {fileID: 3405516508341212127}
+  - component: {fileID: 9086073964853650214}
+  - component: {fileID: 3785536336371191935}
   m_Layer: 5
   m_Name: MRKeyboardInputField
   m_TagString: Untagged
@@ -5129,7 +5126,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3405516508341212124
+--- !u!114 &9086073964853650214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5138,7 +5135,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8039454958294184814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047c3b7041b62b64183482c0f89d6e4b, type: 3}
+  m_Script: {fileID: 11500000, guid: a53105d3ba8017f4e9eefdee71ca5815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4468499601803264748}
+--- !u!114 &3785536336371191935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8039454958294184814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db60ee8118365c4da7b18ef208a9d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -5194,19 +5204,6 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_ShouldActivateOnSelect: 1
-  disableUGUIWorkaround: 0
---- !u!114 &3405516508341212127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8039454958294184814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53320307dee93f640aec3b133d13b341, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   disableUGUIWorkaround: 0
 --- !u!1 &8039454958353472224
 GameObject:
